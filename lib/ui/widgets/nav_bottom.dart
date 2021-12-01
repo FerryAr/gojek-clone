@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gojek/common/my_colors.dart';
 import 'package:gojek/common/my_style.dart';
+import 'package:gojek/ui/widgets/custom_button_icon.dart';
 import 'package:gojek/ui/widgets/custom_card.dart';
-import 'custom_button_icon.dart';
 
 class NavBottom extends StatelessWidget {
   final bool isCollapse;
@@ -43,7 +43,7 @@ class NavBottom extends StatelessWidget {
                       child: CustomButtonIcon(
                         action: () {},
                         iconPath: "assets/images/ic_indoride.png",
-                        text: "IndoRide",
+                        text: "GoRide",
                         height: 50,
                         width: 50,
                       ),
@@ -52,7 +52,7 @@ class NavBottom extends StatelessWidget {
                       child: CustomButtonIcon(
                         action: () {},
                         iconPath: "assets/images/ic_indocar.png",
-                        text: "IndoCar",
+                        text: "GoCar",
                         height: 50,
                         width: 50,
                       ),
@@ -61,7 +61,7 @@ class NavBottom extends StatelessWidget {
                       child: CustomButtonIcon(
                         action: () {},
                         iconPath: "assets/images/ic_indofood.png",
-                        text: "IndoFood",
+                        text: "GoFood",
                         height: 50,
                         width: 50,
                       ),
@@ -70,7 +70,7 @@ class NavBottom extends StatelessWidget {
                       child: CustomButtonIcon(
                         action: () {},
                         iconPath: "assets/images/ic_indosend.png",
-                        text: "IndoSend",
+                        text: "GoSend",
                         height: 50,
                         width: 50,
                       ),
@@ -128,7 +128,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indoride.png",
-                          text: "IndoRide",
+                          text: "GoRide",
                           height: 50,
                           width: 50,
                         ),
@@ -137,7 +137,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indocar.png",
-                          text: "IndoCar",
+                          text: "GoCar",
                           height: 50,
                           width: 50,
                         ),
@@ -146,7 +146,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indofood.png",
-                          text: "IndoFood",
+                          text: "GoFood",
                           height: 50,
                           width: 50,
                         ),
@@ -155,7 +155,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indosend.png",
-                          text: "IndoSend",
+                          text: "GoSend",
                           height: 50,
                           width: 50,
                         ),
@@ -179,7 +179,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indoclub.png",
-                          text: "IndoClub",
+                          text: "GoClub",
                           height: 50,
                           width: 50,
                         ),
@@ -207,7 +207,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indomed.png",
-                          text: "IndoMed",
+                          text: "GoMed",
                           height: 50,
                           width: 50,
                         ),
@@ -235,7 +235,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indofood.png",
-                          text: "IndoFood",
+                          text: "GoFood",
                           height: 50,
                           width: 50,
                         ),
@@ -245,7 +245,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indoshop.png",
-                          text: "IndoShop",
+                          text: "GoShop",
                           height: 50,
                           width: 50,
                         ),
@@ -255,7 +255,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indomart.png",
-                          text: "IndoMart",
+                          text: "GoMart",
                           height: 50,
                           width: 50,
                         ),
@@ -265,7 +265,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indomall.png",
-                          text: "IndoMall",
+                          text: "GoMall",
                           height: 50,
                           width: 50,
                         ),
@@ -289,7 +289,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indoride.png",
-                          text: "IndoRide",
+                          text: "GoRide",
                           height: 50,
                           width: 50,
                         ),
@@ -299,7 +299,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indocar.png",
-                          text: "IndoCar",
+                          text: "GoCar",
                           height: 50,
                           width: 50,
                         ),
@@ -309,7 +309,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indobluebird.png",
-                          text: "IndoBlueBird",
+                          text: "GoBlueBird",
                           height: 50,
                           width: 50,
                         ),
@@ -319,7 +319,7 @@ class NavBottom extends StatelessWidget {
                         child: CustomButtonIcon(
                           action: () {},
                           iconPath: "assets/images/ic_indosend.png",
-                          text: "IndoSend",
+                          text: "GoSend",
                           height: 50,
                           width: 50,
                         ),
