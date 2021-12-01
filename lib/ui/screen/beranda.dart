@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:gojek/common/my_colors.dart';
 import 'package:gojek/common/my_font_size.dart';
 import 'package:gojek/ui/widgets/card_goclub.dart';
+import 'package:gojek/ui/widgets/card_info.dart';
 import 'package:gojek/ui/widgets/custom_button_icon.dart';
+import 'package:gojek/ui/widgets/custom_card.dart';
+import 'package:gojek/ui/widgets/nav_bottom.dart';
+import 'package:gojek/ui/widgets/scroll_brush.dart';
+import 'package:gojek/ui/widgets/subtitle.dart';
 
 class Beranda extends StatefulWidget {
   const Beranda({Key? key}) : super(key: key);
@@ -20,6 +25,7 @@ class _BerandaState extends State<Beranda> {
   List tabBarList = ["Beranda", "Promo", "Pesanan", "Chat"];
   int balanceBalance = 0;
   bool isBrush = false;
+  bool isCollapseNavBottom = true;
 
   @override
   void initState() {
@@ -277,11 +283,102 @@ class _BerandaState extends State<Beranda> {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: CardGoClub()),
             const SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20)
-              child: Subtitle(),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Subtitle(
+                iconPath: "assets/images/ic_indoshop.png",
+                iconText: "GoPayLater",
+                subtitle: "Pake GoPayLater di Tokopedia",
+                caption:
+                    "Belanja & nikmati beragam promo cashback istimewa hingga Rp 1.7 juta untuk-mu~",
+              ),
             ),
+            const SizedBox(height: 20),
+            AspectRatio(
+              aspectRatio: 1 / 1,
+              child: ListView(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                scrollDirection: Axis.horizontal,
+                children: List.generate(
+                  5,
+                  (index) => const CardInfo(
+                    imageUrl:
+                        "https://lelogama.go-jek.com/cache/5e/6e/5e6ea5074fb50db5c28e29489f064fee.webp",
+                    title: "Hadiah dari GoJek buat perjalananmu!",
+                    caption:
+                        "Nikmatin perjalanan aman dan hemat naik GoJek/GoCar. Diskon sampai Rp 76.000 pake kode INDOMERDEKA. Klik!",
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 25),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Subtitle(
+                iconPath: "assets/images/ic_indoride.png",
+                iconText: "GoJek",
+                subtitle: "Promo Merdeka buat kamu",
+                caption:
+                    "Ada diskon dari GoJek/GoCar, paket hemat GoSend Instant, dan diskon GoPay di sini!",
+                prefWidget: CustomCard(
+                  isShadow: false,
+                  padding: EdgeInsets.zero,
+                  bgColor: MyColors.softGreen,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
+                    child: Text("Lihat Semua",
+                        style: TextStyle(
+                          color: MyColors.darkGreen,
+                          fontSize: MyFontSize.medium2,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 25),
+            AspectRatio(
+              aspectRatio: 1 / 1,
+              child: ListView(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                scrollDirection: Axis.horizontal,
+                children: List.generate(
+                    5,
+                    (index) => const CardInfo(
+                          imageUrl:
+                              "https://lelogama.go-jek.com/cache/5e/6e/5e6ea5074fb50db5c28e29489f064fee.webp",
+                          title: "Bongkar rahasia penjualan barang murah",
+                          caption:
+                              "Nikmatin perjalanan aman dan hemat naik IndoJek/IndoCar. Diskon sampai Rp 76.000 pake kode INDOMERDEKA. Klik!",
+                        )),
+              ),
+            ),
+            const SizedBox(height: 120),
           ],
+        ),
+        if (isBrush)
+          const Align(alignment: Alignment.topCenter, child: ScrollBrush()),
+        Positioned(
+          left: 0,
+          right: 0,
+          bottom: 0,
+          child: GestureDetector(
+            onPanUpdate: (details) {
+              if (details.delta.dy < 0) {
+                isCollapseNavBottom = false;
+                setState(() {});
+              }
+
+              if (details.delta.dy > 0) {
+                isCollapseNavBottom = true;
+                setState(() {});
+              }
+            },
+            child: NavBottom(
+              isCollapse: isCollapseNavBottom,
+            ),
+          ),
         ),
       ]),
     );

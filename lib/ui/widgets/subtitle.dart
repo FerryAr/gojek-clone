@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gojek/common/my_colors.dart';
+import 'package:gojek/common/my_font_size.dart';
 import 'package:gojek/common/my_style.dart';
 
 class Subtitle extends StatelessWidget {
@@ -25,7 +26,46 @@ class Subtitle extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            children: [],
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Image.asset(
+                          iconPath!,
+                          height: 25,
+                          width: 25,
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            iconText!,
+                            style: MyStyle.textTitleBlack,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      subtitle,
+                      style: TextStyle(
+                        color: MyColors.blackText,
+                        fontSize: MyFontSize.large3,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (prefWidget != null) prefWidget!,
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(
+            caption,
+            style: MyStyle.textParagraphBlack,
           )
         ],
       ),
